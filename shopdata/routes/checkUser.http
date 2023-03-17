@@ -36,6 +36,7 @@ DELETE http://localhost:6060/api/users/2
 
 ###
 PUT http://localhost:6060/api/users/aa51a6b5-5080-4a33-9e30-ab247ffbbcdb
+
 Content-Type: application/json
 
 {
@@ -64,4 +65,23 @@ Content-Type: application/json
         "userName": "Amaraa",
         "password": "huuurhun amra"
       }
+}
+
+//////////mongodb
+
+###
+POST http://localhost:6060/api/users
+Content-Type: application/json
+
+{
+    "firstName": "Test1",
+    "lastName": "Test1e",
+    "email": "Test921yrtt-0dd1rer0",
+    "address": "Test1",
+    "phoneNumber": 12345,
+    "userName": "T2estyrty1a-1errfdfe11",
+    "password": "Test1",
+    "isAdmin": false,
+    "order": ["ssa" , "fdsd"],
+    "favItem": ["dsa"]
 }

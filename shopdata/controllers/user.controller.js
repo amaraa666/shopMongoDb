@@ -8,6 +8,8 @@ const myKey = "123456^^!'_'"
 
 const file = process.cwd() + '/data/users.json';
 
+const User = require('../models/user.model');
+
 exports.getAll = (req, res) => {
 
     fs.readFile(file, 'utf-8', (readErr, data) => {
@@ -51,51 +53,12 @@ exports.get = (req, res) => {
     })
 };
 
-exports.create = (req, res) => {
-    const body = req.body
-
-    fs.readFile(file, 'utf-8', async (readErr, data) => {
-
-        if (readErr) {
-            return res.json({ status: false, message: readErr });
-        }
-
-        const myData = data ? JSON.parse(data) : []
-
-        const newPassword = await bcrypt.hash(body.password + myKey, saltRounds);
-
-        const Obj =
-        {
-            userID: uuid.v4(),
-            details: {
-                firstName: body.details.firstName,
-                lastName: body.details.lastName,
-                email: body.details.email,
-                address: body.details.address,
-                phoneNumber: body.details.phoneNumber,
-                gen: body.details.male,
-            },
-            signIn: {
-                userName: body.signIn.userName,
-                password: newPassword,
-            },
-            admin: body.admin,
-            order: body.order,
-            favItem: body.favItem
-        }
-
-        myData.push(Obj);
-
-        fs.writeFile(file, JSON.stringify(myData), (err) => {
-
-            if (err) {
-                return res.json({ status: false, message: err });
-            }
-
-            return res.json({ status: true, result: myData });
-
-        });
-    });
+exports.create = async (req, res) => {
+    const body = req.body;
+    console.log(body)
+    const newUser = new User(body);
+    const result = await newUser.save();
+    res.json({ status: true, data: result });
 };
 
 exports.delete = (req, res) => {
