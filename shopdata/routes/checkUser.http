@@ -2,14 +2,6 @@
 
 
 ###
-GET http://localhost:6060/api/users
-
-###
-GET http://localhost:6060/api/users/2
-
-
-
-###
 POST http://localhost:6060/api/users
 Content-Type: application/json
 
@@ -74,14 +66,43 @@ POST http://localhost:6060/api/users
 Content-Type: application/json
 
 {
-    "firstName": "Test1",
+    "firstName": "Test10",
     "lastName": "Test1e",
-    "email": "Test921yrtt-0dd1rer0",
+    "email": "Test921yrtt-0dd1rer01",
     "address": "Test1",
     "phoneNumber": 12345,
-    "userName": "T2estyrty1a-1errfdfe11",
+    "userName": "T2estyrty1a01errfdfe11",
     "password": "Test1",
     "isAdmin": false,
     "order": ["ssa" , "fdsd"],
     "favItem": ["dsa"]
+}
+
+###
+GET http://localhost:6060/api/users/get
+Content-Type: application/json
+
+{
+     "_id": "6418e45ea5e235fc47f08e7a"
+}
+###
+GET http://localhost:6060/api/users
+
+
+###
+PUT http://localhost:6060/api/users
+Content-Type: application/json
+
+{
+     "_id": "6418e45ea5e235fc47f08e7a"
+}
+
+
+###
+
+DELETE http://localhost:6060/api/users
+Content-Type: application/json
+
+{
+    "_id": "6418e45ea5e235fc47f08e7a"
 }

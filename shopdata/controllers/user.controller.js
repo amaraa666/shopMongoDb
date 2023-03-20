@@ -29,28 +29,13 @@ exports.getAll = (req, res) => {
     })
 };
 
-exports.get = (req, res) => {
-
-    const { id } = req.params;
-    console.log(id)
-
-    fs.readFile(file, 'utf-8', (readErr, data) => {
-
-        const myData = JSON.parse(data)
-
-        if (readErr) {
-            return res.json({ status: false, message: readErr });
-        }
-
-        const filteredDta = myData.filter((dt) => {
-            return dt.userID == id
-        })
-
-        console.log(filteredDta)
-
-        return res.json({ status: true, result: filteredDta });
-
-    })
+exports.get = async (req, res) => {
+    const { _id } = req.body;
+    const result = await User.find({_id} , null);
+    if(result.length <= 0){
+        res.json({status: false , message: 'amjilttgui'})
+    }
+    res.json({status: true , result});
 };
 
 exports.create = async (req, res) => {
@@ -61,68 +46,16 @@ exports.create = async (req, res) => {
     res.json({ status: true, data: result });
 };
 
-exports.delete = (req, res) => {
-    const { id } = req.params;
-
-    fs.readFile(file, 'utf-8', (readErr, data) => {
-        const myData = JSON.parse(data)
-
-        if (readErr) {
-            return res.json({ status: false, message: readErr })
-        }
-
-        const myDeletedData = myData.filter((el) => {
-            return el.userID != id
-        })
-
-        fs.writeFile(file, JSON.stringify(myDeletedData), (err) => {
-            if (err) {
-                return res.json({ status: false, message: err });
-            }
-
-            return res.json({ status: true, result: myDeletedData })
-        })
-    })
+exports.delete = async (req, res) => {
+    const { _id } = req.body;
+    const result = await User.deleteOne({_id});
+    res.json({status: true , message: "amjilttai ustgagdlaa"});
 };
 
-exports.uptade = (req, res) => {
-    const { id } = req.params;
-    console.log(req.params)
-    const body = req.body
-
-    fs.readFile(file, 'utf-8', (readErr, data) => {
-        if (readErr) {
-            return res.json({ status: false, message: readErr });
-        }
-
-        const myData = JSON.parse(data);
-
-
-        console.log(body);
-        myData.map((c) => {
-            if (c.userID == id) {
-                c.details.firstName = body.details.firstName,
-                    c.details.lastName = body.details.lastName,
-                    c.details.email = body.details.email,
-                    c.details.address = body.details.address,
-                    c.details.phoneNumber = body.details.phoneNumber,
-                    c.details.gen = body.details.male,
-                    c.signIn.userName = body.signIn.userName,
-                    c.signIn.password = body.signIn.password,
-                    c.admin = body.admin,
-                    c.order = body.order,
-                    c.favItem = body.favItem
-            }
-        });
-
-        fs.writeFile(file, JSON.stringify(myData), (err) => {
-            if (err) {
-                return res.json({ status: false, message: err });
-            }
-
-            return res.json({ status: true, result: myData });
-        });
-    });
+exports.uptade = async (req, res) => {
+    const { _id } = req.body;
+    const result = await User.updateOne({_id},{$set: {firstName: "Amar"}});
+    res.json({status: true , message: "amjilttai zaslaa"});
 };
 
 exports.login = (req, res) => {

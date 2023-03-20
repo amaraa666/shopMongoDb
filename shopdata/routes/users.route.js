@@ -7,11 +7,11 @@ const router = express.Router();
 const users = require('../controllers/user.controller.js');
 
 router.get('/users', users.getAll);
-router.get('/users/:id', users.get);
+router.get('/users/get', users.get);
 router.post('/users', users.create);
 router.post('/users/login', users.login);
-router.put('/users/:id', users.uptade);
-router.delete('/users/:id', users.delete);
+router.put('/users', users.uptade);
+router.delete('/users', users.delete);
 
 
 module.exports = router;
