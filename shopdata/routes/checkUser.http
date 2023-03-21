@@ -62,11 +62,28 @@ Content-Type: application/json
 //////////mongodb
 
 ###
+GET http://localhost:6060/api/users
+
+###
+GET http://localhost:6060/api/users/64128ecd787af784e89fd35b
+
+###
+PUT http://localhost:6060/api/users/64128ecd787af784e89fd35b
+Content-Type: application/json
+
+{
+    "firstName": "Bold"
+}
+
+###
+DELETE http://localhost:6060/api/users/6418e1dd3f665a166990b3c7
+
+###
 POST http://localhost:6060/api/users
 Content-Type: application/json
 
 {
-    "firstName": "Test10",
+    "firstName": "Test",
     "lastName": "Test1e",
     "email": "Test921yrtt-0dd1rer01",
     "address": "Test1",
@@ -76,33 +93,4 @@ Content-Type: application/json
     "isAdmin": false,
     "order": ["ssa" , "fdsd"],
     "favItem": ["dsa"]
-}
-
-###
-GET http://localhost:6060/api/users/get
-Content-Type: application/json
-
-{
-     "_id": "6418e45ea5e235fc47f08e7a"
-}
-###
-GET http://localhost:6060/api/users
-
-
-###
-PUT http://localhost:6060/api/users
-Content-Type: application/json
-
-{
-     "_id": "6418e45ea5e235fc47f08e7a"
-}
-
-
-###
-
-DELETE http://localhost:6060/api/users
-Content-Type: application/json
-
-{
-    "_id": "6418e45ea5e235fc47f08e7a"
 }

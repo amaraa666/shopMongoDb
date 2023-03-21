@@ -4,14 +4,15 @@
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
-
-const mongoose = require('mongoose');
-
 const app = express();
 const PORT = 6060;
 
-const mongo_connection_string = 'mongodb+srv://amraKatoki:ch6Xb1gfq0sKpYFj@cluster0.xvhrabk.mongodb.net/shop'
-mongoose.connect(mongo_connection_string)
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+mongoose.connect(process.env.MONGO_DB_URL)
     .then(() => console.log('database connected successfully'))
     .catch(err => console.error(err));
 

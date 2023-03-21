@@ -9,11 +9,14 @@ const userSchema = new mongoose.Schema(
         phoneNumber: Number,
         userName: String,
         password: String,
-        isAdmin: Boolean,
+        isAdmin: {
+            type: Boolean,
+            default: false
+        },
         order: [String],
         favItem: [String]
     },
-    { collection: 'user' }
+    { collection: 'user', timestamps: true }
 );
 
 const User = mongoose.model('user', userSchema);

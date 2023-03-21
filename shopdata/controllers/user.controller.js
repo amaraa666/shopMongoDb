@@ -10,52 +10,53 @@ const file = process.cwd() + '/data/users.json';
 
 const User = require('../models/user.model');
 
-exports.getAll = (req, res) => {
-
-    fs.readFile(file, 'utf-8', (readErr, data) => {
-        const myData = JSON.parse(data)
-
-        if (readErr) {
-            return res.json({ status: false, message: readErr });
-        }
-
-        fs.writeFile(file, JSON.stringify(myData), (err) => {
-            if (err) {
-                return res.json({ status: false, message: err });
-            }
-
-            return res.json({ status: true, result: myData });
-        })
-    })
+exports.getAll = async (req, res) => {
+    try {
+        const result = await User.find({});
+        res.json({ status: true, result });
+    } catch (err) {
+        res.json({ status: false, message: err });
+    }
 };
 
 exports.get = async (req, res) => {
-    const { _id } = req.body;
-    const result = await User.find({_id} , null);
-    if(result.length <= 0){
-        res.json({status: false , message: 'amjilttgui'})
+    const { _id } = req.params;
+    try {
+        const result = await User.findById({ _id });
+        res.json({ staus: true, result });
+    } catch (err) {
+        res.json({ status: false, message: err });
     }
-    res.json({status: true , result});
 };
 
 exports.create = async (req, res) => {
-    const body = req.body;
-    console.log(body)
-    const newUser = new User(body);
-    const result = await newUser.save();
-    res.json({ status: true, data: result });
+    try {
+        const result = await User.create(req.body);
+        res.json({ status: false, result });
+    } catch (err) {
+        res.json({ status: false, message: err });
+    }
 };
 
 exports.delete = async (req, res) => {
-    const { _id } = req.body;
-    const result = await User.deleteOne({_id});
-    res.json({status: true , message: "amjilttai ustgagdlaa"});
+    const { _id } = req.params;
+    try {
+        const result = await User.findByIdAndDelete({ _id });
+        console.log(result)
+        res.json({ status: true, result });
+    } catch (err) {
+        res.json({ status: false, message: err });
+    };
 };
 
 exports.uptade = async (req, res) => {
-    const { _id } = req.body;
-    const result = await User.updateOne({_id},{$set: {firstName: "Amar"}});
-    res.json({status: true , message: "amjilttai zaslaa"});
+    const { _id } = req.params;
+    try {
+        const result = await User.findByIdAndUpdate({ _id }, req.body);
+        res.json({ stsus: true, result })
+    } catch (err) {
+        res.json({ status: false, message: err });
+    }
 };
 
 exports.login = (req, res) => {

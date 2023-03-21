@@ -32,3 +32,18 @@ Content-Type: application/json
 ###
 DELETE http://localhost:6060/api/products/1
 
+###
+
+GET http://localhost:6060/api/products
+
+
+###
+POST http://localhost:6060/api/products
+Content-Type: application/json
+
+{
+  
+}
+
+
+
