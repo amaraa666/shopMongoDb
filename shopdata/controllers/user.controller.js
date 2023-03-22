@@ -32,7 +32,7 @@ exports.get = async (req, res) => {
 exports.create = async (req, res) => {
     try {
         const result = await User.create(req.body);
-        res.json({ status: false, result });
+        res.json({ status: true, result });
     } catch (err) {
         res.json({ status: false, message: err });
     }

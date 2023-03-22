@@ -4,13 +4,18 @@
 GET http://localhost:6060/api/categories
 
 ###
-GET http://localhost:6060/api/categories/2
+GET http://localhost:6060/api/categories/641a2ff38c5baa3ee8dfc1b7
 
 ###
 POST http://localhost:6060/api/categories
+Content-Type: application/json
+
+{
+    "CategoryName": "bag"
+}
 
 ###
-PUT http://localhost:6060/api/category/2
+PUT http://localhost:6060/api/category/641a2ff38c5baa3ee8dfc1b7
 
 ###
-DELETE http://localhost:6060/api/categories/2
+DELETE http://localhost:6060/api/categories/641a2ff98c5baa3ee8dfc1b9

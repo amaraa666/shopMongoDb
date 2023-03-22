@@ -65,10 +65,10 @@ Content-Type: application/json
 GET http://localhost:6060/api/users
 
 ###
-GET http://localhost:6060/api/users/64128ecd787af784e89fd35b
+GET http://localhost:6060/api/users/64128f2e7f21780d581f695a
 
 ###
-PUT http://localhost:6060/api/users/64128ecd787af784e89fd35b
+PUT http://localhost:6060/api/users/64128f2e7f21780d581f695a
 Content-Type: application/json
 
 {
@@ -83,12 +83,12 @@ POST http://localhost:6060/api/users
 Content-Type: application/json
 
 {
-    "firstName": "Test",
-    "lastName": "Test1e",
-    "email": "Test921yrtt-0dd1rer01",
+    "firstName": "Test122",
+    "lastName": "Test1e12",
+    "email": "Test921yrtt-0dd1rerjk01",
     "address": "Test1",
     "phoneNumber": 12345,
-    "userName": "T2estyrty1a01errfdfe11",
+    "userName": "T2estyrty1a01errfdfe1121",
     "password": "Test1",
     "isAdmin": false,
     "order": ["ssa" , "fdsd"],

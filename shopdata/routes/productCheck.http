@@ -32,8 +32,11 @@ Content-Type: application/json
 ###
 DELETE http://localhost:6060/api/products/1
 
-###
 
+///////mongodb 
+
+
+###
 GET http://localhost:6060/api/products
 
 
@@ -42,7 +45,17 @@ POST http://localhost:6060/api/products
 Content-Type: application/json
 
 {
-  
+  "productName": "String",
+    "categoryIds": ["641a33a664fa75b29fa54fab"],
+    "price": 1234,
+    "desc": "String",
+    "sale": 13,
+    "color": "String",
+    "isTrending": false,
+    "brands": [""],
+    "isFav": false,
+    "imgs": "String",
+    "quantity":123
 }
 
 

@@ -1,8 +1,11 @@
-const { default: mongoose } = require("mongoose");
+const { default: mongoose , Schema } = require("mongoose");
 
 const ProductSchema = new mongoose.Schema({
     productName: String,
-    categoryIds: [String],
+    categoryIds: [{
+        type: Schema.Types.ObjectId,
+        ref: "Category"
+    }],
     price: Number,
     desc: String,
     sale: Number,
@@ -11,6 +14,10 @@ const ProductSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    brands: [{
+        type: Schema.Types.ObjectId ,
+        ref: "Brand"
+    }],
     isFav: {
         type: Boolean,
         default: false
@@ -21,6 +28,6 @@ const ProductSchema = new mongoose.Schema({
     { collection: 'products', timestamps: true }
 );
 
-const Products = mongoose.model('products', ProductSchema);
+const Products = mongoose.model('products', ProductSchema);  // ene products yu vee 
 
 module.exports = Products;
