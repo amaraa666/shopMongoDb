@@ -52,10 +52,21 @@ Content-Type: application/json
     "sale": 13,
     "color": "String",
     "isTrending": false,
-    "brands": [""],
+    "brandIds": ["641baca75570cf603f63d116"],
     "isFav": false,
     "imgs": "String",
     "quantity":123
+}
+
+###
+DELETE http://localhost:6060/api/products/641bb82c16aa4e6d203cccfe
+
+###
+PUT http://localhost:6060/api/products/
+Content-Type: application/json
+
+{
+  "productName": "test1"
 }
 
 

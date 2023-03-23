@@ -2,3 +2,22 @@
 
 ###
 GET http://localhost:6060/api/brands
+
+###
+POST http://localhost:6060/api/brands
+Content-Type: application/json
+
+{
+    "brandName": "Tony Jeans"
+}
+
+###
+DELETE http://localhost:6060/api/brands/641baa5c91f49be6fa6571f0
+
+###
+PUT http://localhost:6060/api/brands/641baa5c91f49be6fa6571f0
+Content-Type: application/json
+
+{
+    "brandName": "Gucci"
+}

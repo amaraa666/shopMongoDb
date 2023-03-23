@@ -1,10 +1,10 @@
-const { default: mongoose , Schema } = require("mongoose");
+const { default: mongoose, Schema } = require("mongoose");
 
 const ProductSchema = new mongoose.Schema({
     productName: String,
     categoryIds: [{
         type: Schema.Types.ObjectId,
-        ref: "Category"
+        ref: 'Category'
     }],
     price: Number,
     desc: String,
@@ -14,9 +14,9 @@ const ProductSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    brands: [{
-        type: Schema.Types.ObjectId ,
-        ref: "Brand"
+    brandIds: [{
+        type: Schema.Types.ObjectId,
+        ref: "Brands"
     }],
     isFav: {
         type: Boolean,

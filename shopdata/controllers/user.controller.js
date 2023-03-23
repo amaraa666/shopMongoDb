@@ -1,12 +1,9 @@
 
 
-const fs = require('fs');
-const uuid = require('uuid');
 const bcrypt = require('bcrypt');
 const saltRounds = 3;
 const myKey = "123456^^!'_'"
 
-const file = process.cwd() + '/data/users.json';
 
 const User = require('../models/user.model');
 

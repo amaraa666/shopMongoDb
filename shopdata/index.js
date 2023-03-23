@@ -34,9 +34,6 @@ app.use('/api', categoriesRouter);
 app.use('/api', adminRouter);
 app.use('/api', BrandRouter);
 
-app.get('/api', (req, res) => {
-    res.json({ message: "welcome rest api" });
-});
 
 app.listen(PORT, () => {
     console.log('server is running' + PORT);

@@ -1,12 +1,15 @@
 
-const {default: mongoose} = require("mongoose");
+const { default: mongoose } = require("mongoose");
 
 const BrandSchema = new mongoose.Schema({
-    BrandName: String
+    brandName: {
+        type: String,
+        unique: true
+    }
 },
-    {collection: "Brands" , timestamps: true}
+    { collection: "Brands", timestamps: true }
 );
 
-const Brands = mongoose.model("brands" , BrandSchema);
+const Brands = mongoose.model("Brands", BrandSchema);
 
 module.exports = Brands; 

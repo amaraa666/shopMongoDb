@@ -21,10 +21,11 @@ exports.get = async (req, res) => {
     };
 };
 
-exports.uptade = async (req, res) => {
+exports.update = async (req, res) => {
     const { _id } = req.params;
     try {
-        const result = await Brand.findByIDAndUpdate({ _id }, req.body)
+        const result = await Brand.findByIdAndUpdate({ _id }, req.body)
+        res.json({ status: true, result });
     } catch (err) {
         res.json({ status: false, message: err });
     };

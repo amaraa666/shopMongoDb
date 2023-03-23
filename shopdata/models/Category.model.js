@@ -1,5 +1,5 @@
 
-const {default: mongoose} = require('mongoose');
+const { default: mongoose } = require('mongoose');
 
 const CategorySchema = new mongoose.Schema({
     CategoryName: {
@@ -7,7 +7,7 @@ const CategorySchema = new mongoose.Schema({
         unique: true
     }
 },
-    {collection: "Category" , timestamps: true}
+    { collection: "Category", timestamps: true }
 );
 
 const Category = mongoose.model("Category", CategorySchema);

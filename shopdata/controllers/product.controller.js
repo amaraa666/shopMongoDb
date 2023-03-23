@@ -2,15 +2,11 @@
 
 
 
-const fs = require('fs');
-const uuid = require('uuid');
-
-const file = process.cwd() + "/data/product.json"
 const Product = require('../models/product.model');
 
 exports.getAll = async (req, res) => {
     try {
-        const result = await Product.find({}).populate('Category');
+        const result = await Product.find({}).populate({ path: "categoryIds", select: "_id  CategoryName" }).populate({ path: "brandIds", select: "_id  brandName" });
         console.log(result)
         res.json({ status: true, result })
     } catch (err) {
@@ -39,7 +35,7 @@ exports.uptade = async (req, res) => {
 
 exports.create = async (req, res) => {
     try {
-        const result = await Product.create(req.body).populate('Category');
+        const result = await Product.create(req.body);
         res.json({ status: true, result });
     } catch (err) {
         res.json({ status: false, message: err });
