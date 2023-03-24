@@ -1,0 +1,21 @@
+
+
+###
+GET http://localhost:6060/api/orders
+
+
+###
+GET http://localhost:6060/api/orders/
+
+
+###
+POST http://localhost:6060/api/orders
+Content-Type: application/json
+
+{
+    "UserId": "",
+    "totalPrice": 1234,
+    "requiredDate": "2022-12-31",
+    "shippedDate": "2022-12-30",
+    "status": "Cancelled"  
+}

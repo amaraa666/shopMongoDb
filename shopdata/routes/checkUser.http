@@ -63,34 +63,63 @@ Content-Type: application/json
 
 ###
 GET http://localhost:6060/api/users
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
+
+
+###
+POST http://localhost:6060/api/users/register
+Content-Type: application/json
+
+{
+  "email":"Oyuka5@gmail.com",
+  "password":"qweqwe123456"
+}
+
+
+
+###
+POST http://localhost:6060/api/users/login
+Content-Type: application/json
+
+{
+  "email":"Oyuka5@gmail.com",
+  "password":"qweqwe123456"
+}
+
 
 ###
 GET http://localhost:6060/api/users/64128f2e7f21780d581f695a
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
 
 ###
 PUT http://localhost:6060/api/users/64128f2e7f21780d581f695a
 Content-Type: application/json
-
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
 {
     "firstName": "Bold"
 }
 
 ###
-DELETE http://localhost:6060/api/users/6418e1dd3f665a166990b3c7
+DELETE http://localhost:6060/api/users/641d0139d2815bae57ea4e75
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
 
 ###
 POST http://localhost:6060/api/users
 Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
 
 {
     "firstName": "Test122",
     "lastName": "Test1e12",
-    "email": "Test921yrtt-0dd1rerjk01",
+    "email": "test",
     "address": "Test1",
     "phoneNumber": 12345,
-    "userName": "T2estyrty1a01errfdfe1121",
+    "userName": "Test",
     "password": "Test1",
     "isAdmin": false,
-    "order": ["ssa" , "fdsd"],
+    "orderIds": ["ssa" , "fdsd"],
     "favItem": ["dsa"]
 }

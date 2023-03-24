@@ -13,7 +13,10 @@ const userSchema = new mongoose.Schema(
             type: Boolean,
             default: false
         },
-        order: [String],
+        orderIds: [{
+            type: String,
+            ref: "Orders"
+        }],
         favItem: [String]
     },
     { collection: 'user', timestamps: true }
