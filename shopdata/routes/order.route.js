@@ -3,13 +3,15 @@
 const express = require('express');
 const route = express.Router();
 
-const Order = require('../controllers/order.controller.js');
+const auth = require('../middleware/auth');
 
-route.get("/orders", Order.getAll);
-route.get("/orders", Order.get);
-route.put("/orders", Order.update);
-route.post("/orders", Order.create);
-route.delete("/orders", Order.delete);
+const order = require('../controllers/order.controller.js');
+
+route.get("/orders", auth,  order.getAll);
+route.get("/orders/:_id",auth , order.get);
+route.put("/orders/:_id",auth ,  order.update);
+route.post("/orders",auth ,  order.create);
+route.delete("/orders/:_id",auth , order.delete);
 
 
 module.exports = route;
