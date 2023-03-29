@@ -1,16 +1,21 @@
 
 
-const { default: mongoose } = require('mongoose');
+const { default: mongoose, Schema } = require('mongoose');
 
 const OrderDetSchema = new mongoose.Schema({
     orderId: {
-        type: String,
+        type: Schema.Types.ObjectId,
         ref: "Order"
     },
-    shipStatus: {
-        type: String,
-        enum: ["", "", ""]
-    }
+    productIds: [{
+        type: Schema.Types.ObjectId,
+        ref: 'products'
+    }],
+    requiredDate: Date,
+    totalPrice: Number
 },
     { collection: "OrderDetail", timestamps: true }
 );
+
+const OrderDet = mongoose.model('OrderDet', OrderDetSchema);
+module.exports = OrderDet;

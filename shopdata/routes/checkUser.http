@@ -1,70 +1,10 @@
 
-
-
-###
-POST http://localhost:6060/api/users
-Content-Type: application/json
-
-    {
-        "details": {
-            "firstName": "Amraaaa",
-            "lastName": "Munkh",
-            "email": "ami@gmail.com",
-            "address": "Iveel hothon",
-            "phoneNumber": "70118818",
-            "gen": "male"
-        },
-        "signIn": {
-            "userName": "Amaraa",
-            "password": "huurhun huuhduud"
-        },
-        "admin": true,
-        "order": [],
-        "favItem": []
-    }
-###
-
-DELETE http://localhost:6060/api/users/2
-
-###
-PUT http://localhost:6060/api/users/aa51a6b5-5080-4a33-9e30-ab247ffbbcdb
-
-Content-Type: application/json
-
-{
-        "details": {
-            "firstName": "AmraHuu",
-            "lastName": "MunkhOchir",
-            "email": "ami@gmail.com",
-            "address": "Iveel hothon",
-            "phoneNumber": "70118818"
-        },
-        "signIn": {
-            "userName": "Amaraa",
-            "password": "huurhun amra"
-        },
-        "admin": false,
-        "order": [],
-        "favItem": []
-}
-
-###
-POST http://localhost:6060/api/users/login
-Content-Type: application/json
-
-{
-     "signIn": {
-        "userName": "Amaraa",
-        "password": "huuurhun amra"
-      }
-}
-
 //////////mongodb
 
 ###
 GET http://localhost:6060/api/users
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjM5NGEzMWRjOTBiNWI4MWVjOTllMyIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZ3VXpiUDVlTFlVNHZpM0k5M0JXQ3VKd3p2VXplQnBPRm5KQ0lhSm5uUEZwTEZBMXUzamtLIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVySWRzIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsIl9fdiI6MH0sImlhdCI6MTY4MDA1MzQxNCwiZXhwIjoxNjgwMjI2MjE0fQ.UloLQ0S3ZU-CvVQ8BJAOp7PIVf7yEs5Pqixn1O39zNY
 
 
 ###
@@ -91,25 +31,25 @@ Content-Type: application/json
 ###
 GET http://localhost:6060/api/users/64128f2e7f21780d581f695a
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjM5NGEzMWRjOTBiNWI4MWVjOTllMyIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZ3VXpiUDVlTFlVNHZpM0k5M0JXQ3VKd3p2VXplQnBPRm5KQ0lhSm5uUEZwTEZBMXUzamtLIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVySWRzIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsIl9fdiI6MH0sImlhdCI6MTY4MDA1MzQxNCwiZXhwIjoxNjgwMjI2MjE0fQ.UloLQ0S3ZU-CvVQ8BJAOp7PIVf7yEs5Pqixn1O39zNY
 
 ###
 PUT http://localhost:6060/api/users/64128f2e7f21780d581f695a
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjM5NGEzMWRjOTBiNWI4MWVjOTllMyIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZ3VXpiUDVlTFlVNHZpM0k5M0JXQ3VKd3p2VXplQnBPRm5KQ0lhSm5uUEZwTEZBMXUzamtLIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVySWRzIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsIl9fdiI6MH0sImlhdCI6MTY4MDA1MzQxNCwiZXhwIjoxNjgwMjI2MjE0fQ.UloLQ0S3ZU-CvVQ8BJAOp7PIVf7yEs5Pqixn1O39zNY
 {
     "firstName": "Bold"
 }
 
 ###
-DELETE http://localhost:6060/api/users/641d0139d2815bae57ea4e75
+DELETE http://localhost:6060/api/users/64128f2e7f21780d581f695a
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjM5NGEzMWRjOTBiNWI4MWVjOTllMyIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZ3VXpiUDVlTFlVNHZpM0k5M0JXQ3VKd3p2VXplQnBPRm5KQ0lhSm5uUEZwTEZBMXUzamtLIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVySWRzIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsIl9fdiI6MH0sImlhdCI6MTY4MDA1MzQxNCwiZXhwIjoxNjgwMjI2MjE0fQ.UloLQ0S3ZU-CvVQ8BJAOp7PIVf7yEs5Pqixn1O39zNY
 
 ###
 POST http://localhost:6060/api/users
 Content-Type: application/json
-x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MWQwMTM5ZDI4MTViYWU1N2VhNGU3NSIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHdiWnFlN21QcHNURDl5RHZZUWpRZi5XNEMudVZrUFpvdWYuNGNycjNrVXVSU21nSUtaNGhTIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVyIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjRUMDE6NDc6MzcuNzk1WiIsIl9fdiI6MH0sImlhdCI6MTY3OTYyMjY2OCwiZXhwIjoxNjc5NjI5ODY4fQ.jSMu4oOjFp2axB7e_NZcQnsqVf_-asrOexSZqUHJ7zs
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0MjM5NGEzMWRjOTBiNWI4MWVjOTllMyIsImVtYWlsIjoiT3l1a2E1QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZ3VXpiUDVlTFlVNHZpM0k5M0JXQ3VKd3p2VXplQnBPRm5KQ0lhSm5uUEZwTEZBMXUzamtLIiwiaXNBZG1pbiI6ZmFsc2UsIm9yZGVySWRzIjpbXSwiZmF2SXRlbSI6W10sImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjlUMDE6MzA6MTEuMjQ5WiIsIl9fdiI6MH0sImlhdCI6MTY4MDA1MzQxNCwiZXhwIjoxNjgwMjI2MjE0fQ.UloLQ0S3ZU-CvVQ8BJAOp7PIVf7yEs5Pqixn1O39zNY
 
 {
     "firstName": "Test122",

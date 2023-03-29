@@ -23,6 +23,7 @@ const categoriesRouter = require('./routes/category.route.js');
 const adminRouter = require('./routes/adminUsers.js');
 const BrandRouter = require('./routes/brand.route.js');
 const OrderRouter = require('./routes/order.route.js');
+const OrderDetRouter = require('./routes/orderDet.route.js');
 
 app.use(express.json());
 app.use(cors());
@@ -35,6 +36,13 @@ app.use('/api', categoriesRouter);
 app.use('/api', adminRouter);
 app.use('/api', BrandRouter);
 app.use('/api', OrderRouter);
+app.use('/api', OrderDetRouter);
+
+
+
+app.get('/api', () => {
+    console.log('success')
+})
 
 
 app.listen(PORT, () => {

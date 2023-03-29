@@ -1,9 +1,4 @@
 
-
-const fs = require('fs');
-const uuid = require('uuid');
-
-const file = process.cwd() + "/data/category.json"
 const Category = require("../models/Category.model");
 
 exports.getAll = async (req, res) => {
